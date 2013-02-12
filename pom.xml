@@ -50,19 +50,19 @@
                 <enabled>true</enabled>
             </releases>
         </repository>
+        <!--<repository>-->
+            <!--<id>mvnrepository</id>-->
+            <!--<url>http://www.mvnrepository.com/</url>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+        <!--</repository>-->
         <repository>
-            <id>mvnrepository</id>
-            <url>http://www.mvnrepository.com/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>clojars</id>
-            <url>https://clojars.org/repo/</url>
+            <id>web-ledjer</id>
+            <url>https://github.com/8thlight/web-ledjer/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -76,6 +76,11 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>ledjer</groupId>
+            <artifactId>ledjer</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
