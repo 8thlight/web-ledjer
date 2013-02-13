@@ -19,7 +19,7 @@
         <testSourceDirectory>src</testSourceDirectory>
         <resources>
             <resource>
-                <directory>resources</directory>
+                <directory>src/main/webapp/WEB-INF/resources</directory>
             </resource>
         </resources>
         <testResources>
@@ -27,7 +27,7 @@
                 <directory>dev-resources</directory>
             </testResource>
             <testResource>
-                <directory>resources</directory>
+                <directory>src/main/webapp/WEB-INF/resources</directory>
             </testResource>
         </testResources>
         <directory>target</directory>
