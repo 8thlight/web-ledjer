@@ -38,6 +38,7 @@ public class LedjerControllerTest
     assertEquals(true, statement.indexOf("Total:") != -1);
 
     DepositBean bean = (DepositBean)model.get("deposit");
+    bean.setDate("Feb 15, 2013");
     assertEquals(0, bean.getAmount());
     assertEquals("Feb 15, 2013", bean.getDate());
   }

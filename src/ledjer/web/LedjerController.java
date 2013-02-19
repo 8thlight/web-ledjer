@@ -17,7 +17,6 @@ public class LedjerController
   @Autowired
   public LedjerController(Ledger ledger)
   {
-    System.out.println("this = " + this);
     this.ledger = ledger;
   }
 
