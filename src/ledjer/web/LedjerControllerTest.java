@@ -7,6 +7,8 @@ import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +31,8 @@ public class LedjerControllerTest
   public void showsLedjer() throws Exception
   {
     Map<String, Object> model = new HashMap<String, Object>();
-
+    SimpleDateFormat dateFormat = new SimpleDateFormat("MMM d, yyyy");
+    
     String result = controller.showLedger(model);
 
     assertEquals("index", result);
@@ -38,9 +41,8 @@ public class LedjerControllerTest
     assertEquals(true, statement.indexOf("Total:") != -1);
 
     DepositBean bean = (DepositBean)model.get("deposit");
-    bean.setDate("Feb 15, 2013");
     assertEquals(0, bean.getAmount());
-    assertEquals("Feb 15, 2013", bean.getDate());
+    assertEquals(dateFormat.format(new Date()), bean.getDate());
   }
 
   @Test
